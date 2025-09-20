@@ -1,0 +1,63 @@
+/* ==========================================================================
+   informations
+   ========================================================================== */
+
+.grid_informations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+
+    .grid_informations_section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .infos_icons {
+        display: flex;
+        align-items: center;
+
+        .icon_container {
+            --size-bg: 60px;
+
+            height: var(--size-bg);
+            width: var(--size-bg);
+            background-color: var(--color-primary-lighter);
+            border-radius: calc(var(--border-radius) / 2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: var(--spacing-xs);
+            transition: $ease-out;
+
+            &:hover {
+                background-color: var(--color-primary-light);
+            }
+        }
+
+        svg {
+            --size-icon: 24px;
+            height: var(--size-icon);
+            width: var(--size-icon);
+            fill: var(--color-primary-darker);
+        }
+    }
+
+    .map {
+        border-radius: var(--border-radius);
+        min-height: 300px;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr 1fr;
+
+        .infos_map {
+            grid-column: -1 / 1;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-xs) {
+        grid-template-columns: 1fr;
+    }
+}

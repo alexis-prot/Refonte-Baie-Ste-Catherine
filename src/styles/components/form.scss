@@ -1,0 +1,299 @@
+/* ==========================================================================
+   form / component
+   ========================================================================== */
+
+.form {
+    --input-padding: 16px;
+
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--spacing-md);
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .checkbox a {
+        color: var(--color-primary-light);
+        text-decoration: underline;
+        transition: $ease-out;
+
+        &:hover {
+            color: var(--color-primary-lighter);
+        }
+    }
+
+    .titre_info {
+        margin-top: var(--spacing-md);
+    }
+
+    .bouton {
+        margin-top: var(--spacing-md);
+    }
+}
+
+.formulaire_titre_section {
+    text-align: left;
+
+    .is-sent & {
+        text-align: center;
+        display: block;
+    }
+}
+
+.form__footer {
+    display: flex;
+    justify-content: center;
+
+    a {
+        cursor: pointer;
+    }
+}
+
+.form__body {
+    .is-sent & {
+        display: none;
+    }
+}
+
+.form__confirmation {
+    display: none;
+    margin-top: 100px;
+
+    h3 {
+        font-weight: 700;
+    }
+
+    .is-sent & {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.u-grid-fullwidth {
+    grid-column: -1 / 1;
+}
+
+/* --------- Input ---------- */
+
+.input__label {
+    display: block;
+    font-weight: 700;
+}
+
+.radio_contact {
+    p {
+        font-weight: 700;
+    }
+
+    .input__label {
+        font-weight: 300;
+    }
+
+    .form__list {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+}
+
+.input__element {
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary-white);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: var(--input-padding);
+    outline: none;
+    width: 100%;
+    color: var(--color-primary-darker);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-primary-light) !important;
+        -webkit-text-fill-color: inherit !important;
+    }
+
+    // hover
+    &:hover,
+    + .input__label:hover::before {
+        background-color: var(--color-primary-lighter);
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-primary-lighter) !important;
+    }
+
+    // focus
+    &:focus,
+    &:-webkit-autofill:focus,
+    &:focus + .input__label::before {
+        background-color: var(--color-primary-light);
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-primary) !important;
+    }
+
+    // autocomplete
+    &::placeholder {
+        color: var(--color-primary-darker);
+        opacity: 0.6;
+    }
+}
+
+/* --------- Select ---------- */
+
+.select {
+    position: relative;
+
+    .input__element {
+        appearance: none;
+        padding-right: var(--spacing-md);
+
+        &:invalid {
+            color: var(--color-neutral-dark);
+        }
+    }
+
+    option {
+        background-color: var(--color-white);
+        color: var(--color-black);
+        border: none;
+    }
+
+    &::after {
+        --size: 18px;
+        content: '';
+        background: url('../assets/icons/chevron-down.svg') no-repeat 50% 50%;
+        background-size: 100%;
+        height: var(--size);
+        position: absolute;
+        top: 50%; // n'est pas 50% parce que la hauteur compte aussi les messages d'erreurs
+        transform: translateY(50%);
+        right: var(--input-padding);
+        width: var(--size);
+        pointer-events: none;
+    }
+}
+
+/* ---------- Textarea --------- */
+
+.textarea {
+    .input__element {
+        resize: vertical;
+        height: 150px;
+    }
+}
+
+/* -------- Checkbox + radio --------- */
+
+.checkbox,
+.radio {
+    --size: 30px;
+    --active-scale: 1;
+
+    .input__element {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        height: var(--size);
+        width: var(--size);
+    }
+
+    .input__label {
+        cursor: pointer;
+        overflow: visible;
+        padding-left: calc(var(--size) + var(--spacing-sm));
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            height: var(--size);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--size);
+            border-radius: var(--border-radius);
+        }
+
+        &::before {
+            background-color: var(--color-primary-white);
+            background-size: 50%;
+        }
+
+        &::after {
+            background-color: var(--color-primary-light);
+            opacity: 0;
+            transition: $ease-out;
+        }
+    }
+
+    .input__element:checked + .input__label {
+        &::after {
+            opacity: 1;
+            transform: scale(var(--active-scale));
+        }
+    }
+}
+
+.checkbox {
+    .input__label::after {
+        --active-scale: 0.5;
+        background-color: var(--color-primary-darker);
+        border-radius: 100%;
+    }
+}
+
+.radio {
+    .input__label {
+        &::before {
+            border-radius: 100%;
+        }
+
+        &::after {
+            --active-scale: 0.5;
+            background-color: var(--color-primary-darker);
+            border-radius: 100%;
+        }
+    }
+}
+
+/* -------- Error --------- */
+
+.error {
+    position: relative;
+
+    .input__element,
+    &.checkbox .input__label::before,
+    &.radio .input__label::before,
+    .checkbox .input__label::before,
+    .radio .input__label::before {
+        box-shadow: inset 0 0 0 2px var(--color-avertissement);
+    }
+}
+
+.input__error {
+    margin-top: 5px;
+    display: none;
+    justify-content: center;
+    color: var(--color-avertissement);
+    font-size: 80%;
+    font-weight: 700;
+
+    .error & {
+        display: flex;
+    }
+}
+
+.input__error__radio {
+    position: absolute;
+    top: 100%;
+}
+
+// Pour l'icone du select
+.error::after {
+    top: 38% !important;
+}

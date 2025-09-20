@@ -1,0 +1,18 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Poppins', sans-serif; // titres
+    --font-secondary: 'Roboto', sans-serif; // corps de texte
+
+    --font-size-content: #{typo(16px, 20px)};
+
+    /// Grosseur des textes
+    --font-size-h1: #{typo(36px, 72px)};
+    --font-size-h2: #{typo(32px, 52px)};
+    --font-size-h3: #{typo(24px, 32px)};
+    --font-size-h4: #{typo(20px, 26px)};
+
+    --font-size-logo: #{typo(20px, 32px)};
+}

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   barre
+   ========================================================================== */
+
+.barre {
+    height: 5px;
+    width: 200px;
+    background-color: var(--color-primary-light);
+    border-radius: 100px;
+    display: inline-block;
+
+    .hero & {
+        background-color: var(--color-white);
+    }
+
+    .actualite_texte & {
+        margin: var(--spacing-md) 0;
+    }
+}

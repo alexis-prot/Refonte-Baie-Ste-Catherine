@@ -1,0 +1,37 @@
+/* ==========================================================================
+   boutons
+   ========================================================================== */
+
+.bouton {
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    display: inline-block;
+    border-radius: var(--border-radius);
+    transition: $ease-out;
+    border: none;
+
+    svg {
+        transform: rotate(0deg);
+        margin-bottom: 2px;
+        transition: inherit;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: var(--color-primary-dark);
+        color: var(--color-white);
+
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    .actualite_texte & {
+        margin-top: 30px;
+    }
+}
+
+.balise_button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+}

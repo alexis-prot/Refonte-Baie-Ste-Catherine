@@ -1,0 +1,62 @@
+/* ==========================================================================
+   actualite
+   ========================================================================== */
+
+.grid_actualite {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+
+    .card {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .actualite_texte {
+        padding: var(--spacing-xxl) 0;
+    }
+
+    .actualite_swiper {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+
+        .swiper {
+            height: 625px;
+            width: 90%;
+        }
+
+        .swiper-wrapper {
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .swiper-pagination-bullets {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+
+        .actualite_texte {
+            padding: var(--spacing-xxl) 0 0;
+        }
+
+        .actualite_swiper {
+            .swiper {
+                width: 85%;
+            }
+
+            .swiper-wrapper {
+                margin: 0;
+            }
+        }
+    }
+}

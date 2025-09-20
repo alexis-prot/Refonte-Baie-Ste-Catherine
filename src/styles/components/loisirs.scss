@@ -1,0 +1,57 @@
+/* ==========================================================================
+   loisirs
+   ========================================================================== */
+
+.loisirs_swiper {
+    height: 100%;
+    margin-top: var(--spacing-md);
+
+    .card {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .swiper {
+        height: 480px;
+        margin-bottom: calc(var(--spacing-md) + var(--size-pagination));
+
+        .swiper-pagination-bullets {
+            position: absolute;
+            left: 0;
+            bottom: calc(-1 * var(--spacing-md) - var(--size-pagination));
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: var(--color-white);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--color-white);
+        }
+    }
+
+    .wrapper & {
+        overflow: hidden;
+    }
+}
+
+.titre_loisirs {
+    position: relative;
+
+    .bouton_droite {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        .bouton {
+            position: static;
+            margin-top: var(--spacing-md);
+        }
+    }
+}

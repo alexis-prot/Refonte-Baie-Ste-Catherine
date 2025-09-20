@@ -1,0 +1,26 @@
+/* ==========================================================================
+   sections
+   ========================================================================== */
+
+.section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.section_pas_padding {
+    padding: 0;
+}
+
+.section_bleue {
+    color: var(--color-primary-darker);
+    background-color: var(--color-primary-white);
+}
+
+.section_medium {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+}
+
+.section_foncee {
+    color: var(--color-white);
+    background-color: var(--color-primary-darker);
+}

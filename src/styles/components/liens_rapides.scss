@@ -1,0 +1,45 @@
+/* ==========================================================================
+   liens rapides
+   ========================================================================== */
+
+.grid_liens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+
+    .card_liens {
+        background-color: var(--color-primary-darker);
+        color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: calc(var(--spacing-md) + var(--spacing-xxs)) 0;
+        transition: $ease-out;
+        cursor: pointer;
+
+        .card_liens_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-xxs);
+            transform: scale(100%);
+            transition: $ease-out;
+        }
+
+        svg {
+            fill: var(--color-primary-lighter);
+        }
+
+        &:hover {
+            background-color: var(--color-primary-dark);
+
+            .card_liens_content {
+                transform: scale(110%);
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+}

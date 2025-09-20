@@ -1,0 +1,23 @@
+/* ==========================================================================
+   DIMENSIONS / SETTINGS
+   ========================================================================== */
+
+// Valeurs utilisées pour les médias query
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1920px;
+
+:root {
+    --spacing-xxs: 10px;
+    --spacing-xs: 15px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 60px;
+    --spacing-xl: 80px;
+    --spacing-xxl: 100px;
+
+    // Border Radius pour les coins ronds
+    --border-radius: 32px;
+}

@@ -1,0 +1,92 @@
+/* ==========================================================================
+   cards swiper
+   ========================================================================== */
+
+.card {
+    position: relative;
+    color: var(--color-white);
+    transition: $ease-out;
+    cursor: pointer;
+
+    .card_content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+
+        .texte_fleche {
+            display: flex;
+            align-items: flex-end;
+            padding: var(--spacing-md);
+            width: 100%;
+        }
+
+        .texte {
+            width: 100%;
+        }
+
+        .categorie {
+            padding: var(--spacing-xxs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            background-color: var(--color-primary-default);
+            display: inline-block;
+            margin-bottom: var(--spacing-xxs);
+            font-weight: 700;
+        }
+
+        .fleche {
+            position: relative;
+            height: 100%;
+            width: 6%;
+
+            svg {
+                position: absolute;
+                bottom: 4px;
+                left: 0;
+                transition: $ease-out;
+            }
+        }
+    }
+
+    .card_media {
+        height: 100%;
+        width: 100%;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        position: relative;
+
+        .bg_noir {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--color-black);
+            opacity: 40%;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            z-index: 0;
+            transform: scale(100%);
+            transition: $ease-out;
+        }
+    }
+
+    &:hover {
+        color: var(--color-white);
+
+        img {
+            transform: scale(110%);
+        }
+
+        svg {
+            left: 10px !important;
+        }
+    }
+}

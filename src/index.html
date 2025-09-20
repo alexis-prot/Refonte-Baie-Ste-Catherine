@@ -1,0 +1,469 @@
+{% include "_partials/_header.html" with { title: "Accueil"} %}
+
+<section class="section hero">
+    <div class="wrapper">
+        <div class="hero__media">
+            <img src="assets/images/hero-accueil.jpg" alt="Mer de la Baie Ste-Catherine" />
+        </div>
+
+        <div class="hero__content" data-scrolly="fromBottom">
+            <div class="titre">
+                <h1>Baie St-Catherine</h1>
+                <h3>Capitale de la Zénitude et des baleines</h3>
+            </div>
+
+            <span class="barre"></span>
+
+            <div class="meteo">
+                <svg class="icon icon--md">
+                    <use xlink:href="#icon-soleil"></use>
+                </svg>
+                <h3>22°C</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Alerte -->
+<div class="alerte js-alerte" data-scrolly="fromLeft">
+    <div class="header_alerte">
+        <h4>Averstissement</h4>
+        <a href="#">
+            <svg class="icon icon--sm js-alerte-btn">
+                <use xlink:href="#icon-plus"></use>
+            </svg>
+        </a>
+    </div>
+    <p>La Route 113 est fermée pour les prochains jours. Comme alternative, vous pouvez utiliser la Route 105.</p>
+</div>
+
+<section class="section section_bleue">
+    <div class="wrapper">
+        <div class="titre" data-scrolly="fromBottom">
+            <h2>Présentation de la ville</h2>
+            <h3>Apprenez-en plus sur le plus petit et méconnu de tous les villages du Grand Charlevoix!</h3>
+        </div>
+
+        <div class="grid_video" data-scrolly="fromBottom">
+            <div class="card_video">
+                <div class="video_image">
+                    <div class="video" data-component="YouTube" data-video-id="y69LYSdOMOc">
+                        <div class="video__media js-video">
+                            <img class="js-poster" src="assets/images/video-capitale.jpg" alt="Capitale de la ZÉNITUDE" />
+                            <svg class="icon icon--lg">
+                                <use xlink:href="#icon-jouer"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Capitale mondiale de la ZÉNitude!</h4>
+                <p>Plongez dans l'univers unique de la Baie St-Catherine.</p>
+            </div>
+
+            <div class="card_video">
+                <div class="video">
+                    <div class="video" data-component="YouTube" data-video-id="FF7Ihe46wZU">
+                        <div class="video__media js-video">
+                            <img class="js-poster" src="assets/images/video-maire.jpg" alt="Maire de la baie St-Catherine" />
+                            <svg class="icon icon--lg">
+                                <use xlink:href="#icon-jouer"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Maire - Monsieur Donald Kenny</h4>
+                <p>Découvrez le parcours et la vision de notre maire, Mousieur Donald Kenny.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section_pas_padding">
+    <div class="wrapper">
+        <div class="grid_actualite">
+            <div class="actualite_texte" data-scrolly="fromBottom">
+                <div class="titre">
+                    <h2>Actualité</h2>
+                    <h3>Voyez les dernières nouvelles d’actualités.</h3>
+                </div>
+
+                <span class="barre"></span>
+
+                <p>
+                    Ne manquez pas les toutes dernières nouvelles qui font vibrer la Baie St-Catherine ! Événements locaux, décisions municipales, culture,
+                    sports et faits divers — restez à l'affût de tout ce qui se passe dans votre communauté.
+                </p>
+
+                <a href="" class="bouton" target="_blank">
+                    Voir plus
+                    <svg class="icon icon--xxs">
+                        <use xlink:href="#icon-plus"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="actualite_swiper" data-scrolly="fromBottom">
+                <div class="swiper" data-component="Carousel" data-vertical data-slides="1.6">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a class="card">
+                                <div class="card_content">
+                                    <div class="texte_fleche">
+                                        <div class="texte">
+                                            <p class="categorie">Divertissement</p>
+                                            <h4>Prêt entre bibliothèques pour le mois d’Avril</h4>
+                                        </div>
+
+                                        <div class="fleche">
+                                            <svg class="icon icon-xxl">
+                                                <use xlink:href="#icon-fleche"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card_media">
+                                    <div class="bg_noir"></div>
+                                    <img src="assets/images/actualite_bibliotheque.jpg" alt="Photo d'une bibliothèque" />
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="card">
+                                <div class="card_content">
+                                    <div class="texte_fleche">
+                                        <div class="texte">
+                                            <p class="categorie">Bénévolat</p>
+                                            <h4>VIACTIVE, Le plaisir de bouger en groupe gratuitement !</h4>
+                                        </div>
+
+                                        <div class="fleche">
+                                            <svg class="icon icon-xxl">
+                                                <use xlink:href="#icon-fleche"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card_media">
+                                    <div class="bg_noir"></div>
+                                    <img src="assets/images/actualite_viactive.jpg" alt="Photo d'un sentier" />
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="card">
+                                <div class="card_content">
+                                    <div class="texte_fleche">
+                                        <div class="texte">
+                                            <p class="categorie">Emploi</p>
+                                            <h4>Direction générale et greffier</h4>
+                                        </div>
+
+                                        <div class="fleche">
+                                            <svg class="icon icon-xxl">
+                                                <use xlink:href="#icon-fleche"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card_media">
+                                    <div class="bg_noir"></div>
+                                    <img src="assets/images/actualite_direction.jpg" alt="Photo d'un greffier" />
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="card">
+                                <div class="card_content">
+                                    <div class="texte_fleche">
+                                        <div class="texte">
+                                            <p class="categorie">Communauté</p>
+                                            <h4>Souper de la St-Valentin au profit de la Coop</h4>
+                                        </div>
+
+                                        <div class="fleche">
+                                            <svg class="icon icon-xxl">
+                                                <use xlink:href="#icon-fleche"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card_media">
+                                    <div class="bg_noir"></div>
+                                    <img src="assets/images/actualite_souper.jpg" alt="Photo d'un plat de fraises" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section_bleue" id="loisirs">
+    <div class="wrapper">
+        <div class="titre_loisirs" data-scrolly="fromBottom">
+            <div class="titre">
+                <h2>Loisirs et Tourisme</h2>
+                <h3>Du divertissement à portée de main.</h3>
+            </div>
+
+            <div class="bouton_droite">
+                <a href="" class="bouton" target="_blank">
+                    Voir plus
+                    <svg class="icon icon--xxs">
+                        <use xlink:href="#icon-plus"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="loisirs_swiper" data-scrolly="fromBottom">
+            <div class="swiper" data-component="Carousel" data-loop data-split>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Équitation</h4>
+                                        <p>Au camping et ranch du fjord</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_equitation.jpg" alt="Photo d'un groupe à cheval" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Croisière aux baleines</h4>
+                                        <p>Rencontrez 13 espèces de baleines à moins de 2h du Québec</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_croisiere.jpg" alt="Photo d'une croisière" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Kayak</h4>
+                                        <p>Pour des aventures chaleureuses sur la mer</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_kayak.jpg" alt="Photo de kayakeurs" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Musée régional de Charlevoix</h4>
+                                        <p>Découvrez l’histoire de Charlevoix et l’Art populaire</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_musee.jpg" alt="Photo du musée de Charlevoix" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Réseaux de sentiers</h4>
+                                        <p>Une nature grandiose à partager</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_sentiers.jpg" alt="Photo d'un sentier'" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="card">
+                            <div class="card_content">
+                                <div class="texte_fleche">
+                                    <div class="texte">
+                                        <h4>Église Saint-Firmin</h4>
+                                        <p>Lieu de culte du village depuis sa construction en 1908</p>
+                                    </div>
+
+                                    <div class="fleche">
+                                        <svg class="icon icon-xxl">
+                                            <use xlink:href="#icon-fleche"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_media">
+                                <div class="bg_noir"></div>
+                                <img src="assets/images/loisir_eglise.jpg" alt="Photo de l'Église de Saint-Firmin" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrapper">
+        <div class="titre" data-scrolly="fromBottom">
+            <h2>Liens rapides</h2>
+            <h3>Voyez-en plus</h3>
+        </div>
+
+        <div class="grid_liens" data-scrolly="fromBottom">
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_poubelle"></use>
+                    </svg>
+                    <h4>Collectes</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_animal"></use>
+                    </svg>
+                    <h4>Animaux</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_billet"></use>
+                    </svg>
+                    <h4>Finances</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_voiture"></use>
+                    </svg>
+                    <h4>Véhicules</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_activite"></use>
+                    </svg>
+                    <h4>Activités</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_etampe"></use>
+                    </svg>
+                    <h4>Permis</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_stop"></use>
+                    </svg>
+                    <h4>Plaintes</h4>
+                </div>
+            </div>
+
+            <div class="card_liens">
+                <div class="card_liens_content">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-liens_maison"></use>
+                    </svg>
+                    <h4>Municipalité</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "_partials/_infolettre.html" %} {% include "_partials/_footer.html" %}

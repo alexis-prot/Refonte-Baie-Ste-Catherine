@@ -1,0 +1,45 @@
+/* ==========================================================================
+   infolettre
+   ========================================================================== */
+
+.infolettre .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    @media screen and (max-width: $breakpoint-md) {
+        flex-wrap: wrap;
+
+        .infolettre_content {
+            width: 100%;
+        }
+
+        p {
+            margin-right: var(--spacing-xxl);
+        }
+    }
+}
+
+.infolettre_content {
+    width: 50%;
+
+    .barre {
+        margin: var(--spacing-md) 0;
+    }
+}
+
+.infolettre_cta {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding-left: var(--spacing-xs);
+    border: 1px solid var(--color-primary-dark);
+
+    p {
+        color: var(--color-primary-dark);
+        opacity: 60%;
+        margin-right: calc(var(--spacing-xxl) * 2);
+    }
+}

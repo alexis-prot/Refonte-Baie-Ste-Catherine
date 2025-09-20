@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title }}</title>
+
+
+        <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Baie Ste-Catherine" />
+        <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body data-component="Scrolly" data-no-repeat>
+
+        <header class="header" data-component="Header" data-threshold="0.05" data-scrolly="fromBottom">
+            <div class="wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-logo"></use>
+                    </svg>
+                    Baie St-Catherine
+                </a>
+                <nav class="nav-primary">
+                    <ul class="menu">
+                        <li><a href="index.html#loisirs" class="js-nav-item nav-primary__item">Loisirs</a></li>
+                        <li><a href="#" class="js-nav-item nav-primary__item">Citoyen</a></li>
+                        <li><a href="#" class="js-nav-item nav-primary__item">Urbanisme</a></li>
+                        <li><a href="#" class="js-nav-item nav-primary__item">Ville</a></li>
+                        <li><a href="joindre.html" class="js-nav-item nav-primary__item">Nous joindre</a></li>
+                    </ul>
+                </nav>
+
+                <button class="bouton_mobile js-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>

@@ -1,0 +1,216 @@
+{% include "_partials/_header.html" with { title: "Nous joindre"} %}
+
+<section class="section hero hero_petit">
+    <div class="wrapper">
+        <div class="hero__media">
+            <img src="assets/images/hero-joindre.jpg" alt="Paysage" />
+        </div>
+
+        <div class="hero__content" data-scrolly="fromBottom">
+            <div class="titre">
+                <h1>Nous joindre</h1>
+                <h3>Pour la requête de formulaire</h3>
+            </div>
+
+            <span class="barre"></span>
+        </div>
+    </div>
+</section>
+
+<section class="section section_foncee">
+    <div class="wrapper">
+        <div class="titre" data-scrolly="fromBottom">
+            <h2>Nos Informations</h2>
+        </div>
+
+        <span class="barre"></span>
+
+        <div class="grid_informations">
+            <div class="grid_informations_section infos_contact" data-scrolly="fromBottom">
+                <h4>Contact</h4>
+
+                <div class="infos_contact_texte">
+                    <p>Édifice municipal Albert-Boulianne 308 Rue Leclerc,</p>
+                    <p>Baie-Sainte-Catherine,</p>
+                    <p>Québec G0T 1A0</p>
+                </div>
+
+                <div class="infos_icons">
+                    <a href="tel:418-620-5020" class="icon_container">
+                        <svg class="icon icon-md">
+                            <use xlink:href="#icon-telephone"></use>
+                        </svg>
+                    </a>
+
+                    <p>Téléphone : 418-620-5020</p>
+                </div>
+
+                <div class="infos_icons">
+                    <a href="mailto:info@baiestecatherine.com" class="icon_container">
+                        <svg class="icon icon-xl">
+                            <use xlink:href="#icon-courriel"></use>
+                        </svg>
+                    </a>
+
+                    <p>info@baiestecatherine.com</p>
+                </div>
+            </div>
+
+            <div class="grid_informations_section infos_heures" data-scrolly="fromBottom">
+                <h4>Heures</h4>
+
+                <div class="infos_heures_texte">
+                    <p>Lundi - Jeudi :</p>
+                    <p>Ouverture : 8h30</p>
+                    <p>Fermeture : 16h30</p>
+                    <p>Édifice fermé entre 12h00 et 13h00</p>
+                </div>
+
+                <div class="infos_heures_texte">
+                    <h4>Vendredi :</h4>
+                    <p>Fermé</p>
+                </div>
+            </div>
+
+            <div class="grid_informations_section infos_map" data-scrolly="fromBottom">
+                <iframe
+                    class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21314.24660167467!2d-69.74592365214487!3d48.104818209324065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfd315be0748cf%3A0x795e89795bbe65c7!2sBaie-Sainte-Catherine%2C%20QC%20G0T%201A0!5e0!3m2!1sfr!2sca!4v1747247426916!5m2!1sfr!2sca"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrapper">
+        <!-- action à voir -->
+        <form action="#" class="form" autocomplete="off" data-component="Form">
+            <h2 class="formulaire_titre_section">Formulaires de requêtes citoyennes</h2>
+
+            <div class="form__body">
+                <fieldset class="grid">
+                    <div class="titre u-grid-fullwidth" data-scrolly="fromBottom">
+                        <h3>Informations personnelles</h3>
+                        <span class="barre"></span>
+                    </div>
+
+                    <div class="input" data-scrolly="fromBottom">
+                        <label class="input__label" for="lastname">Nom</label>
+                        <input class="input__element" type="text" name="lastname" id="lastname" placeholder="Votre nom" required />
+                        <span class="input__error">Vous devez mettre votre nom</span>
+                    </div>
+
+                    <div class="input" data-scrolly="fromBottom">
+                        <label class="input__label" for="firstname">Prénom</label>
+                        <input class="input__element" type="text" name="firstname" id="firstname" placeholder="Votre prénom" required />
+                        <span class="input__error">Vous devez mettre votre prénom</span>
+                    </div>
+
+                    <div class="input" data-scrolly="fromBottom">
+                        <label class="input__label" for="email">Courriel</label>
+                        <input class="input__element" type="email" name="email" id="email" placeholder="Votre adresse courriel" required />
+                        <span class="input__error">Vous devez mettre votre adresse courriel</span>
+                    </div>
+
+                    <div class="input" data-scrolly="fromBottom">
+                        <label class="input__label" for="phone">Téléphone</label>
+                        <input
+                            class="input__element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Votre numéro de téléphone"
+                            pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
+                            required
+                        />
+                        <span class="input__error">Vous devez mettre votre numéro de téléphone</span>
+                    </div>
+
+                    <div class="input" data-scrolly="fromBottom">
+                        <label class="input__label" for="address">Adresse</label>
+                        <input class="input__element" type="text" name="address" id="address" placeholder="Votre adresse (numéro civique et rue)" required />
+                        <span class="input__error">Vous devez mettre votre adresse civique</span>
+                    </div>
+
+                    <div class="input select" data-scrolly="fromBottom">
+                        <label class="input__label" for="ville">Ville</label>
+                        <select class="input__element" name="ville" id="ville" required>
+                            <option value="" hidden>Votre ville</option>
+                            <option value="stc">Baie Ste-Catherine</option>
+                            <option value="tad">Saint-Siméon et Tadoussac</option>
+                            <option value="mal">La Malbaie</option>
+                        </select>
+                        <span class="input__error">Vous devez mettre votre ville</span>
+                    </div>
+
+                    <div class="radio_contact" data-scrolly="fromBottom">
+                        <p>Méthode de contact</p>
+                        <div class="form__list" data-input-container>
+                            <div class="input radio">
+                                <input class="input__element" type="radio" name="contact[]" id="contact_courriel" value="true" required />
+                                <label class="input__label" for="contact_courriel">Courriel</label>
+                            </div>
+                            <div class="input radio">
+                                <input class="input__element" type="radio" name="contact[]" id="contact_telephone" value="true" required />
+                                <label class="input__label" for="contact_telephone">Téléphone</label>
+                            </div>
+                            <span class="input__error input__error__radio">Vous devez choisir votre méthode de contact</span>
+                        </div>
+                    </div>
+
+                    <div class="titre titre_info u-grid-fullwidth" data-scrolly="fromBottom">
+                        <h3>Informations personnelles</h3>
+                        <span class="barre"></span>
+                    </div>
+
+                    <div class="input select u-grid-fullwidth" data-scrolly="fromBottom">
+                        <label class="input__label" for="sujet">Sujet</label>
+                        <select class="input__element" name="sujet" id="sujet" required>
+                            <option value="" hidden>Le sujet de votre message</option>
+                            <option value="per">Permis de stationement</option>
+                            <option value="ren">Demande de renseignements</option>
+                            <option value="res">Réservation de salle</option>
+                        </select>
+                        <span class="input__error">Vous devez mettre le sujet de votre requête</span>
+                    </div>
+
+                    <div class="input textarea u-grid-fullwidth" data-scrolly="fromBottom">
+                        <label class="input__label" for="comment">Message</label>
+                        <textarea class="input__element" name="comment" id="comment" placeholder="Votre message" required maxlength="500"></textarea>
+                        <span class="input__error">Vous devez mettre votre message de requête</span>
+                    </div>
+
+                    <div class="input checkbox" data-scrolly="fromBottom">
+                        <input class="input__element" type="checkbox" name="optin[]" id="optin" value="true" required />
+                        <label class="input__label" for="optin">
+                            En cochant cette case, vous acceptez nos
+                            <a href="https://www.avocat.qc.ca/affaires/iiutil_siteweb.htm" target="_blank">termes d’utilisations</a>
+                        </label>
+                        <span class="input__error">Vous devez accepter nos conditions d'utilisation</span>
+                    </div>
+                </fieldset>
+
+                <footer class="form__footer">
+                    <button class="bouton balise_button" data-scrolly="fromBottom">
+                        Soumettre
+                        <svg class="icon icon--xxs">
+                            <use xlink:href="#icon-plus"></use>
+                        </svg>
+                    </button>
+                </footer>
+            </div>
+
+            <div class="form__confirmation">
+                <h3>Envoyé!</h3>
+                <p>Votre formulaire a bien et bel été envoyé, et nous allons le consulter sous peu!</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% include "_partials/_infolettre.html" %} {% include "_partials/_footer.html" %}
